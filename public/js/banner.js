@@ -18,7 +18,7 @@ window.addEventListener("load", async () => {
 
   bannerImg.style.background = `url(${bannerData[0].image}) center / cover no-repeat`;
   bannerTitle.innerText = bannerData[0].title;
-  bannerImg.setAttribute("href", bannerData[0].link);
+  bannerImg.setAttribute("href", `/movie/${bannerData[0].link}`);
   slideInterval = setInterval(() => moveSlider(1), 3000);
 
   const moveSlider = (n) => {

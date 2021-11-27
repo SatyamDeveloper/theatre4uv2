@@ -155,8 +155,9 @@ window.addEventListener("load", async () => {
       document.getElementById("myFrame").setAttribute("src", currVidData.src);
       document.getElementById("myFrame").style.width = "100%";
     }
-    
-    document.getElementById("myFrame").setAttribute('allowfullscreen','allowfullscreen')
+    document.getElementById("myFrame").setAttribute('allowfullscreen','true')
+    document.getElementById("myFrame").setAttribute('webkitallowfullscreen','true')
+    document.getElementById("myFrame").setAttribute('mozallowfullscreen','true')
   });
 
   const watchBtn = document.getElementById("watchBtn");

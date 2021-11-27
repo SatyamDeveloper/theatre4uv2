@@ -158,6 +158,8 @@ window.addEventListener("load", async () => {
     document.getElementById("myFrame").setAttribute('allowfullscreen','true')
     document.getElementById("myFrame").setAttribute('webkitallowfullscreen','true')
     document.getElementById("myFrame").setAttribute('mozallowfullscreen','true')
+    document.getElementById("myFrame").setAttribute('marginheight','0')
+    document.getElementById("myFrame").setAttribute('marginwidth','0')
   });
 
   const watchBtn = document.getElementById("watchBtn");

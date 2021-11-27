@@ -26,7 +26,7 @@ window.addEventListener("load", async () => {
     sliderIndex === bannerData.length && n > 0 ? (sliderIndex = 0) : null;
     sliderIndex < 0 && n < 0 ? (sliderIndex = bannerData.length - 1) : null;
     bannerImg.style.background = `url(${bannerData[sliderIndex].image}) center / cover no-repeat`;
-    bannerImg.setAttribute("href", `/movie/${bannerData[0].slug}`);
+    bannerImg.setAttribute("href", `/movie/${bannerData[sliderIndex].slug}`);
     bannerTitle.innerText = bannerData[sliderIndex].title;
   };
 

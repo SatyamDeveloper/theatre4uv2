@@ -1,0 +1,177 @@
+@media screen and (max-width: 700px) {
+  section.slider {
+    min-height: 60vw !important;
+  }
+  section.slider .control button {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  section.slider .control button svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  section.slider h3 {
+    font-size: 20px !important;
+  }
+  section.filter .control .left .btn,
+  section.filter .control .right .btn {
+    padding: 0 8px !important;
+  }
+  section.filter .control .left .btn svg,
+  section.filter .control .right .btn svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  section.filter .control .left::after,
+  section.filter .control .right::before {
+    width: 40px !important;
+  }
+}
+
+section.slider {
+  min-height: 32.5vw;
+  border-top: 1px solid var(--primaryBorderClr);
+  position: relative;
+}
+
+section.slider .control,
+section.slider h3,
+section.slider a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+section.slider .control {
+  padding: 0 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  pointer-events: none;
+}
+
+section.slider .control button {
+  pointer-events: all;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primaryBg);
+  border: 1px solid var(--primaryBorderClr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.slider h3 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-bottom: 20px;
+  pointer-events: none;
+  font-size: 30px;
+  font-weight: normal;
+  color: #fff;
+}
+
+section.filter {
+  border: 1px solid var(--primaryBorderClr);
+  border-left: none;
+  border-right: none;
+  background: var(--primaryBg);
+  position: relative;
+}
+
+section.filter .control {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  pointer-events: none;
+}
+
+section.filter .control .left,
+section.filter .control .right {
+  pointer-events: all;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.filter .control .left .btn,
+section.filter .control .right .btn {
+  height: 100%;
+  padding: 0 12px;
+  background: var(--primaryBg);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+section.filter .control .left.off,
+section.filter .control .right.off {
+  opacity: 0;
+  pointer-events: none;
+}
+
+section.filter .control .right::before,
+section.filter .control .left::after {
+  content: "";
+  width: 50px;
+  pointer-events: none;
+}
+
+section.filter .control .right::before {
+  background: -webkit-gradient(linear, right top, left top, from(var(--primaryBg)), color-stop(80%, transparent));
+  background: linear-gradient(to left, var(--primaryBg) 0%, transparent 80%);
+}
+
+section.filter .control .left::after {
+  background: -webkit-gradient(linear, left top, right top, from(var(--primaryBg)), color-stop(80%, transparent));
+  background: linear-gradient(to right, var(--primaryBg) 0%, transparent 80%);
+}
+
+section.filter .tags {
+  margin: 8px;
+  overflow: auto;
+}
+
+section.filter .tags::-webkit-scrollbar {
+  display: none;
+}
+
+section.filter .tags a {
+  padding: 7px 16px;
+  margin: 0 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+  border-radius: 25px;
+  background: var(--primaryBorderClr);
+  border: 1px solid var(--primaryBorderClr);
+  -webkit-transition: background-color 0.5s cubic-bezier(0.05, 0, 0, 1);
+  transition: background-color 0.5s cubic-bezier(0.05, 0, 0, 1);
+}
+
+section.filter .tags a:hover, section.filter .tags a:focus {
+  background: var(--secondaryHoverClr);
+}
+
+section.filter .tags a.active {
+  background-color: var(--primaryClr);
+  color: var(--secondaryBg);
+}
+/*# sourceMappingURL=index.css.map */

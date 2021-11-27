@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>theatre4u</title>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <% if (page === 'home') { %>
+    <link rel="stylesheet" href="/css/index.css" />
+    <% } %> <% if (page === 'player') { %>
+    <link rel="stylesheet" href="/css/player.css" />
+    <% } %>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %> <% if (page === 'home') { %><%-
+    include('./partials/slider.ejs') %> <%- include('./partials/filter.ejs')%>
+    <% } else if (page === 'player') { %>
+    <section id="vidPlayer" class="player playlist">
+      <iframe id="myFrame" frameborder="0"></iframe>
+      <div class="playerlist" id="playerList">
+        <div class="con">
+          <h2 id="playListTitle" class="flex"></h2>
+          <div class="body" id="playListCon"></div>
+        </div>
+      </div>
+    </section>
+    <section id="movieData" class="movie_data"></section>
+    <% } %>
+    <section class="videos" id="videoCon"></section>
+
+    <% if (page === 'player') { %>
+    <script>
+      let currVidId = `<%= currVidId %>`;
+    </script>
+    <% } else{ %>
+    <script>
+      let currVidId;
+    </script>
+    <% } %> <% if (page === 'watchlist') { %>
+    <script src="/js/watchlist.js"></script>
+    <% } else{ %>
+    <script src="/js/video.js"></script>
+    <% } %> <% if (page === 'home') { %>
+    <script src="/js/banner.js"></script>
+    <script src="/js/filter.js"></script>
+    <% } %> <% if (page === 'player') { %>
+    <script src="/js/player.js"></script>
+    <% } %>
+
+    <script src="/js/search.js"></script>
+    <script src="/js/theme.js"></script>
+  </body>
+</html>

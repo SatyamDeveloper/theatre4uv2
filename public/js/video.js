@@ -25,7 +25,6 @@ videoData.forEach((video) => {
     <a href="/movie/${link}">
     <div class="top">
     <img src=${video.image} />
-          <img class="webp" src=${video.thumbnail} />
           <p>${video.duration}</p>
       </div>
       <div class="bottom">
